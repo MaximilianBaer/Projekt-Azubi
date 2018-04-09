@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>b7bbf96c-6877-431f-9ee7-7e93e2e04a0d</ProjectGuid>
+    <ProjectGuid>4b7df293-6ae3-4bc1-aabf-7c7b1a05e671</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>kekse</RootNamespace>
