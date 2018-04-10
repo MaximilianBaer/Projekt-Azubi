@@ -16,7 +16,7 @@ namespace kekse
         internal static List<int> Zahlen_testen(int untergrenze, int obergrenze)
         {
             var zahlen = new List<int>();
-            for (int zahl = untergrenze; zahl <obergrenze; zahl++)
+            for (int zahl = untergrenze; zahl <=obergrenze; zahl++)
             {
                 zahlen.Add(zahl);
             }
