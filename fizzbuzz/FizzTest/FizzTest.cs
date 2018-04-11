@@ -10,5 +10,10 @@ namespace FizzTest
 {
     public class FizzTest
     {
+        [Test, Category("Aktzeptanstest")]
+        public void Übersetzung_testen()
+        {
+            var ergebnid = 
+        }
     }
 }

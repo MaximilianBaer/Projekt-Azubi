@@ -103,12 +103,8 @@ namespace fizzbuzz
         {
             var alle_zahlen = Start_Zahlen_testen(zahl1, zahl2);
             string Endausgabe;
-            for (int zahl_1 = 0; zahl_1 < alle_zahlen.Count(); zahl_1++)
-            {
-
-                
-                string stufe_fizz = Convert.ToString(alle_zahlen[zahl_1]);
-               
+            for (int zahl_1 = 0; zahl_1 <= alle_zahlen.Count(); zahl_1++)
+            {     
                 try
                 {
                     Endausgabe = fizzbuzz[Convert.ToString(zahl_1)];
@@ -125,9 +121,10 @@ namespace fizzbuzz
         }
         public static void Main()
         {
+            Console.WriteLine("Geben sie eine Zahl ein");
             int zahl1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Geben sie eine weitere zahl ein die Größer ist als die erste");
             int zahl2 = Convert.ToInt32(Console.ReadLine());
-            Console.ReadLine();
             fizzbuzz_definition(zahl1, zahl2);
             fizz_definition(zahl1, zahl2);
             buzz_definiton(zahl1, zahl2);
