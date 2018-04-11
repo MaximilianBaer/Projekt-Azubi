@@ -60,22 +60,21 @@ namespace fizzbuzz
         }
         internal static void fizz_definition(int zahl1,int zahl2)
         {
-           
+           //
         
         }
-        //internal static void buz()
-        //{
-        //    //["Diktionary für bus anlegen"]
-        //return variable;
-        //}
+        internal static void buzz_definiton(int zahl1, int zahl2)
+        {
+            
+        
+        }
         internal void Ausgabe(string ausg)
         {
             Console.WriteLine(ausg);
         }
         public static void Main()
         {
-            //[get eingabe]
-            //[Ausgaben   ]
+            
             fizzbuzz_definition(3, 20000);
         }
     }
