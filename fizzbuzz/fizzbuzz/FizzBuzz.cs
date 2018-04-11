@@ -27,8 +27,6 @@ namespace fizzbuzz
         }
 
         internal static Dictionary<string, string> fizzbuzz = new Dictionary<string, string>();
-        internal static Dictionary<string, string> fizz = new Dictionary<string, string>();
-        internal static Dictionary<string, string> buzz = new Dictionary<string, string>();
 
         internal static IEnumerable<int> fizz_logik(int[] zahlen_fizzbuzz)
         {
@@ -69,7 +67,14 @@ namespace fizzbuzz
 
             for (int zahl_1 = 0; zahl_1 < fizz_stufe.Count(); zahl_1++)
             {
-                fizz.Add(Convert.ToString(fizz_stufe[zahl_1]), "FIZZ");
+                try
+                {
+                    fizzbuzz.Add(Convert.ToString(fizz_stufe[zahl_1]), "FIZZ");
+                }
+                catch
+                {
+
+                }
             }
             
         }
@@ -83,7 +88,14 @@ namespace fizzbuzz
 
             for (int zahl_1 = 0; zahl_1 < buzz_stufe.Count(); zahl_1++)
             {
-                buzz.Add(Convert.ToString(buzz_stufe[zahl_1]), "BUZZ");
+                try
+                { 
+                    fizzbuzz.Add(Convert.ToString(buzz_stufe[zahl_1]), "BUZZ");
+                }
+                catch
+                {
+
+                }
             }
             
         }
@@ -94,36 +106,20 @@ namespace fizzbuzz
             for (int zahl_1 = 0; zahl_1 < alle_zahlen.Count(); zahl_1++)
             {
 
-                bool fiz, buz, fizbuz;
+                
                 string stufe_fizz = Convert.ToString(alle_zahlen[zahl_1]);
-
+               
                 try
                 {
-                    Endausgabe = fizz[Convert.ToString(zahl_1)];
-                    f iz == true;
-                    
+                    Endausgabe = fizzbuzz[Convert.ToString(zahl_1)];
                     Console.WriteLine(Endausgabe);
+                    
+                    
                 }
                 catch
                 {
                     Console.WriteLine(zahl_1);
-                }
-                try
-                {
-                    Endausgabe = buzz[Convert.ToString(zahl_1)];
-                }
-                catch
-                {
-
-                }
-                try
-                {
-                    Endausgabe = fizzbuzz[Convert.ToString(zahl_1)];
-                }
-                catch
-                {
-
-                }
+                }  
             }
             Console.ReadLine();
         }
