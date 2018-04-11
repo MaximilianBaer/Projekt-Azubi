@@ -32,7 +32,7 @@ namespace fizzbuzz
   
         //internal static IEnumerable<int> fizz_logik(int[] zahlen_fizzbuzz)
         //{
-        //    return;
+        //    return; 
         //}
         //internal static IEnumerable<int> buzz_logik(int[] zahlen_fizzbuzz)
         //{
