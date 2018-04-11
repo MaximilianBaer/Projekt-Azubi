@@ -32,36 +32,39 @@ namespace fizzbuzz
         {
 
         }
-        internal class fiz_logik
+        internal class fizz_logik
         {
 
         }
-        internal class bus_logik
+        internal class buzz_logik
         {
 
         }
-        internal class fizbuz_logik
+        internal static IEnumerable<int> fizzbuzz_logik(int[] zahlen_fizzbuzz)
         {
-            int fizzbuzz_var;
-            //var population = new Tuple<int, int, int, int, int, int, int>(4, 4, 4, 4, 4, 4, 4);
+            IEnumerable<int> querry = from zahlen_fizb in zahlen_fizzbuzz where zahlen_fizb % 3 == 0 && zahlen_fizb % 5 == 0 select zahlen_fizb;
+            return querry;
         }
-        internal void fizbuz(int z1, int z2)
+        internal static void fizzbuzz_definition(int zahl1, int zahl2)
         {
-            //[get Fizbuz_stufe_1 from fizbuz_logik]
-            var erg = Start_Zahlen_testen(z1, z2);
-            Dictionary<string, string> FIZBUS = new Dictionary<string, string>();
-            foreach (int zahl_1 in erg)
+            int[] fizzbuzz_stufe;
+            var alle_zahlen = Start_Zahlen_testen(zahl1, zahl2);
+            
+            var fizzbuzz_vorstufe_1 = fizzbuzz_logik(alle_zahlen.ToArray());
+            fizzbuzz_stufe = fizzbuzz_vorstufe_1.ToArray();
+
+            for (int zahl_1 = 0; zahl_1 < fizzbuzz_stufe.Count(); zahl_1++ )
             {
-                /*FIZBUS.Add(Convert.ToString(zahl_1), fizbuz_stufe_1);*/
-                Console.WriteLine("dfsd");
-                Console.ReadLine();
+                Console.WriteLine(fizzbuzz_stufe[zahl_1]);
+                fizzbuzz.Add(Convert.ToString(fizzbuzz_stufe_1[zahl_1]), "FIZZBUZZ");
             }
+            Console.ReadLine();
         }
-        //internal static void fiz()
-        //{
-        //    //["Diktionary für fiz anlegen"]
-        //return variable;
-        //}
+        internal static void fizz_definition(int zahl1,int zahl2)
+        {
+           
+        
+        }
         //internal static void buz()
         //{
         //    //["Diktionary für bus anlegen"]
@@ -71,11 +74,11 @@ namespace fizzbuzz
         {
             Console.WriteLine(ausg);
         }
-        public void Main()
+        public static void Main()
         {
             //[get eingabe]
             //[Ausgaben   ]
-            fizbuz(1, 55);
+            fizzbuzz_definition(3, 20000);
         }
         //Thread hzz = new Thread(fizbuz);
         //hzz.Start.();
