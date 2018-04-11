@@ -61,7 +61,7 @@ namespace fizzbuzz
         internal static void fizz_definition(int zahl1,int zahl2)
         {
            //
-        
+         
         }
         internal static void buzz_definiton(int zahl1, int zahl2)
         {
