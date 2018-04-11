@@ -25,21 +25,19 @@ namespace fizzbuzz
             }
             return zahlen;
         }
+
         internal static Dictionary<string, string> fizzbuzz = new Dictionary<string, string>();
         internal static Dictionary<string, string> fizz = new Dictionary<string, string>();
         internal static Dictionary<string, string> buzz = new Dictionary<string, string>();
-        internal class zahlen
-        {
-
-        }
-        internal class fizz_logik
-        {
-
-        }
-        internal class buzz_logik
-        {
-
-        }
+  
+        //internal static IEnumerable<int> fizz_logik(int[] zahlen_fizzbuzz)
+        //{
+        //    return;
+        //}
+        //internal static IEnumerable<int> buzz_logik(int[] zahlen_fizzbuzz)
+        //{
+        //    return;
+        //}
         internal static IEnumerable<int> fizzbuzz_logik(int[] zahlen_fizzbuzz)
         {
             IEnumerable<int> querry = from zahlen_fizb in zahlen_fizzbuzz where zahlen_fizb % 3 == 0 && zahlen_fizb % 5 == 0 select zahlen_fizb;
@@ -56,7 +54,7 @@ namespace fizzbuzz
             for (int zahl_1 = 0; zahl_1 < fizzbuzz_stufe.Count(); zahl_1++ )
             {
                 Console.WriteLine(fizzbuzz_stufe[zahl_1]);
-                fizzbuzz.Add(Convert.ToString(fizzbuzz_stufe_1[zahl_1]), "FIZZBUZZ");
+                fizzbuzz.Add(Convert.ToString(fizzbuzz_stufe[zahl_1]), "FIZZBUZZ");
             }
             Console.ReadLine();
         }
@@ -80,8 +78,5 @@ namespace fizzbuzz
             //[Ausgaben   ]
             fizzbuzz_definition(3, 20000);
         }
-        //Thread hzz = new Thread(fizbuz);
-        //hzz.Start.();
-
     }
 }
