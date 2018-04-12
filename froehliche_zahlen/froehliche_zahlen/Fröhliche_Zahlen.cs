@@ -8,6 +8,11 @@ namespace froehliche_zahlen
 {
     public class Fröhliche_Zahlen
     {
+        public static void Main()
+        {
+            Console.WriteLine(Zahleneingabe(19));
+            
+        }
         public static string Zahleneingabe(int Eingangszahl)
         {
             bool Ergebnis = Prüfung(Eingangszahl);
@@ -30,7 +35,6 @@ namespace froehliche_zahlen
         }
         internal static bool Prüfung(int Einganzahl)
         {
-            bool Ergebnis = true;
             do
             {
                 string Ergebnis_string = Einganzahl.ToString();
@@ -46,11 +50,15 @@ namespace froehliche_zahlen
                     zahl_zum_rechnen = zahl_zum_rechnen + Convert.ToInt32(Math.Pow(Zahlen_getrent[i], 2));
                 }
                 Einganzahl = zahl_zum_rechnen;
-            } while (Einganzahl != 4 || Einganzahl != 1);
-
-
-
-            return Ergebnis;
+            } while (Einganzahl != 4 && Einganzahl != 1);
+            if (Einganzahl == 4)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
