@@ -14,13 +14,13 @@ namespace Test_Röhmiche_Zahlen
         [Test, Category("Funktionstaest")]
         public void Test_1()
         {
-            string Test_1 = Röhiche_Zahl.Eingabe(660);
-            Assert.AreEqual("DCLX", Test_1);
+            string Test_1 = Röhiche_Zahl.Eingabe(498);
+            Assert.AreEqual("CDXCVIII", Test_1);
         }
         [Test, Category("Funktionstaest")]
         public void Test_2()
         {
-            string Test_1 = Röhiche_Zahl.Eingabe(3001);
+            string Test_1 = Röhiche_Zahl.Eingabe(13001);
             Assert.AreEqual("zu groß", Test_1);
         }
         [Test, Category("Funktionstaest")]
