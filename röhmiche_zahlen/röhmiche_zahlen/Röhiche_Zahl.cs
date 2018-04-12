@@ -28,15 +28,13 @@ namespace röhmiche_zahlen
         }
         internal static string umwandlung_schrit_2(int[] zahlen, int eingabe)
         {
-            
             string zahlen_R = "";
-            
-            for (int i = 0; i < zahlen.Length; i++)
+            for (int ziffer = 0; ziffer < zahlen.Length; ziffer++)
             {
-                switch (i)
+                switch (ziffer)
                 {
                     case 0:
-                        switch (zahlen[i])
+                        switch (zahlen[ziffer])
                         {
                             case 0:
                                 break;
@@ -71,7 +69,7 @@ namespace röhmiche_zahlen
                         }
                         break;
                     case 1:
-                        switch (zahlen[i])
+                        switch (zahlen[ziffer])
                         {
                             case 0:
                                 break;
@@ -105,7 +103,7 @@ namespace röhmiche_zahlen
                         }
                         break;
                     case 2:
-                        switch (zahlen[i])
+                        switch (zahlen[ziffer])
                         {
                             case 0:
                                 break;
@@ -140,7 +138,7 @@ namespace röhmiche_zahlen
                         }
                         break;
                     case 3:
-                        switch (zahlen[i])
+                        switch (zahlen[ziffer])
                         {
                             case 0:
                                 break;
