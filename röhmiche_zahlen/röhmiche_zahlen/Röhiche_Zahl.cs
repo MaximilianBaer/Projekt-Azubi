@@ -151,7 +151,7 @@ namespace röhmiche_zahlen
                                 zahlen_R = "MM" + zahlen_R;
                                 break;
                             case 3:
-                                zahlen_R = "zu groß";
+                                zahlen_R = "MMM" + zahlen_R;
                                 break;
                             case 4:
                                 zahlen_R = "zu groß";
