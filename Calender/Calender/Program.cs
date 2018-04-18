@@ -104,7 +104,7 @@ namespace Calender
             }
             else if (neue_eingabe[4] == "monat_ohne_tag")
             {
-                // cal 4 2018
+                // cal 4 2018 
                 neue_eingabe[3] = "Montag";
             }
             else if (neue_eingabe[4] == "monat_mit_tag")
