@@ -23,8 +23,9 @@ namespace Calender
             string[,] tag = tage();
             int leer = leere_tage(erstertag, tage_index);
             string[] tage_array = array_tag(leer, anzahl);
+            string monat = überschrift(befehl);
 
-            string Ausgabe = calender(befehl, Prüfwert,tage_index, tag, tage_array);
+            string Ausgabe = calender(befehl, Prüfwert,tage_index, tag, tage_array, monat);
             Console.WriteLine(Ausgabe);
             goto start;
             
@@ -255,10 +256,27 @@ namespace Calender
             }
             return tage_array;
         }
-        internal static string calender(string[] eingabe, bool Prüfwert, int tagindex, string[,] tage, string[] tage_array)
+        internal static string überschrift(string[] eingabe)
+        {
+            string[] monat = new string[] {
+                "januar   ",
+                "februar  ",
+                "März     ",
+                "April    ",
+                "Mai      ",
+                "Juni     ",
+                "Juli     ",
+                "August   ",
+                "September",
+                "November ",
+                "Dezember "
+            };
+            return monat[Convert.ToInt32(eingabe[1])-1];
+        }
+        internal static string calender(string[] eingabe, bool Prüfwert, int tagindex, string[,] tage, string[] tage_array, string monat)
         {
             if (Prüfwert == false) { return "Befehl " + '"' + eingabe[0] + '"' + " ist nicht vorhanden."; }
-
+            string reihe_0 = monat+ "       "+ eingabe[2];
             string reihe_1 = tage[tagindex,0]+" "+ tage[tagindex, 1] +" "+ tage[tagindex, 2] +" "+ tage[tagindex, 3] +" "+ tage[tagindex, 4] +" "+ tage[tagindex, 5] +" "+ tage[tagindex, 6];
             string linie = "--------------------";
             string reihe_2 = tage_array[0] + " " + tage_array[1] + " " + tage_array[2] + " " + tage_array[3] + " " + tage_array[4] + " " + tage_array[5] + " " + tage_array[6];
@@ -281,7 +299,7 @@ namespace Calender
                     reihe_7 = reihe_7 + tage_array[i + 35] + " ";
                 }
             }
-            string ausgabe_ende = Environment.NewLine + reihe_1+ Environment.NewLine + linie + Environment.NewLine + reihe_2 + Environment.NewLine + reihe_3 + Environment.NewLine + reihe_4 + Environment.NewLine + reihe_5 + Environment.NewLine + reihe_6 + Environment.NewLine + reihe_7;
+            string ausgabe_ende = Environment.NewLine + reihe_0 + Environment.NewLine + reihe_1+ Environment.NewLine + linie + Environment.NewLine + reihe_2 + Environment.NewLine + reihe_3 + Environment.NewLine + reihe_4 + Environment.NewLine + reihe_5 + Environment.NewLine + reihe_6 + Environment.NewLine + reihe_7;
             return ausgabe_ende;
         }
         
