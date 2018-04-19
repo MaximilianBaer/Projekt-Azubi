@@ -28,7 +28,7 @@ namespace test
         [Test, Category("Funktionstest")]
         public void Test_3()
         {
-            int zahl1 = 223, zahl2 = 223;
+            int zahl1 = 7, zahl2 = 223;
             int ergebnis = Bauernmultiplikator.Multipliziere(zahl1, zahl2);
             Assert.AreEqual(zahl1 * zahl2, ergebnis);
         }

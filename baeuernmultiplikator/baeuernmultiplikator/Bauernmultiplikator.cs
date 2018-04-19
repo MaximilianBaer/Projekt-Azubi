@@ -55,7 +55,6 @@ namespace baeuernmultiplikator
             zahle_getennt[1, 0] = zahl2;
             for (int i = 0; i < anzahl; i++)
             {
-                
                 zahle_getennt[0, i + 1]= Convert.ToInt32(Math.Floor(zahl1 / 2));
                 zahl1 = Convert.ToInt32(Math.Floor(zahl1 / 2));    
                 zahle_getennt[1, i + 1] = zahl2 * 2;
@@ -77,11 +76,10 @@ namespace baeuernmultiplikator
         }
         internal static int zusammenrechnen(List<int> alle_zahlen)
         {
-            int[] zahlen_alle = alle_zahlen.ToArray();
             int zahl = 0;
-            for (int i = 0; i < zahlen_alle.Count(); i++)
+            for (int i = 0; i < alle_zahlen.Count(); i++)
             {
-                zahl = zahl + zahlen_alle[i];
+                zahl = zahl + alle_zahlen[i];
             }
             return zahl;
         }
