@@ -268,10 +268,11 @@ namespace Calender
                 "Juli     ",
                 "August   ",
                 "September",
+                "Oktober  ",
                 "November ",
                 "Dezember "
             };
-            return monat[Convert.ToInt32(eingabe[1])-1];
+            return monat[(Convert.ToInt32(eingabe[1])-1)];
         }
         internal static string calender(string[] eingabe, bool Prüfwert, int tagindex, string[,] tage, string[] tage_array, string monat)
         {
