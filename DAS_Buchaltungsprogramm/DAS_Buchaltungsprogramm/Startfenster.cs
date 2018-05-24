@@ -21,17 +21,15 @@ namespace DAS_Buchaltungsprogramm
         {
 
         }
-
         
-
         private void ausgabe_Click(object sender, EventArgs e)
         {
-
+            Ausgabe kekse = new Ausgabe();
+            kekse.Show();
         }
 
         private void eingab_Click_1(object sender, EventArgs e)
         {
-            //Application.Run(new eingabe());
             eingabe kekse = new eingabe();
             kekse.Show();
         }

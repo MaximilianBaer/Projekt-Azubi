@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,10 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="buchaltungDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>buchaltungDataSet.xsd</DependentUpon>
+    <Compile Include="Ausgabe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ausgabe.Designer.cs">
+      <DependentUpon>Ausgabe.cs</DependentUpon>
     </Compile>
     <Compile Include="Startfenster.cs">
       <SubType>Form</SubType>
@@ -65,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ausgabe.resx">
+      <DependentUpon>Ausgabe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Eingabe.resx">
       <DependentUpon>Eingabe.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,17 +85,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="buchaltungDataSet.xsc">
-      <DependentUpon>buchaltungDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="buchaltungDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>buchaltungDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="buchaltungDataSet.xss">
-      <DependentUpon>buchaltungDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,11 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="buchaltung.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
