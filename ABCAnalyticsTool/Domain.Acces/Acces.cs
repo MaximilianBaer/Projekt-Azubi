@@ -13,10 +13,11 @@ namespace Domain.Acces
 {
     public class Acces
     {
+        public static Settings Setting = new Settings();
         public static DecisionData DeciData = new DecisionData();
         public static List<Data> DataSet = new List<Data>();
-        public static Settings Setting = new Settings();
         public static List<GroupedData> groupedData = new List<GroupedData>();
+        public static List<Output> OutputData = new List<Output>();
 
         public static void LodeDataFromDatabase()
         {
