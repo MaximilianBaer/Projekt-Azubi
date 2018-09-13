@@ -47,7 +47,7 @@ namespace DAS_Buchaltungsprogramm
         private void speichern_Click(object sender, EventArgs e)
         {
             GlobalVar.Grund = grund.Text;
-            GlobalVar.hohe = Convert.ToDouble(hoehe.Text);
+            GlobalVar.hohe = Convert.ToDouble(hoehe.Text)*100;
             GlobalVar.datum = Convert.ToString(dattum.Value.ToString("yyyy-MM-dd"));
             MessageBox.Show(GlobalVar.datum);
             if (ein.Checked)

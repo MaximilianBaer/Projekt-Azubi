@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DAS_Buchaltungsprogramm
+namespace ABCAnalyticsTool
 {
-    public partial class Ausgabe : Form
+    public partial class DataView : Form
     {
-        public Ausgabe()
+        public DataView()
         {
             InitializeComponent();
-        }
-
-        private void Ausgabe_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }
