@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Dendrite.cs" />
     <Compile Include="NetworkModel.cs" />
+    <Compile Include="NeuralData.cs" />
     <Compile Include="NeuralLayer.cs" />
     <Compile Include="Neuron.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
