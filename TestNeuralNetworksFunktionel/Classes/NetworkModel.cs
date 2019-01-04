@@ -51,9 +51,86 @@ namespace Classes
             }
         }
 
-        public void Train(/*NeuralData X, NaeuralData Y, int iterations, double lerningRate = 0.1*/)
+        public void Train(NeuralData X, NeuralData Y, int iterations, double lerningRate = 0.1)
         {
-            throw new NotImplementedException();
+            int epoch = 1;
+            //Loop till the number of iterations
+            while (iterations >= epoch)
+            {
+                //Get the input layers
+                var inputLayer = Layers[0];
+                List<double> outputs = new List<double>();
+
+                //Loop through the record
+                for (int i = 0; i < X.Data.Length; i++)
+                {
+                    //Set the input data into the first layer
+                    for (int j = 0; j < X.Data[i].Length; j++)
+                    {
+                        inputLayer.Neurons[j].outputPulse.value = X.Data[i][j];
+                    }
+
+                    //Fire all the neurons and collect the output
+                    computeOutput();
+                    outputs.Add(Layers.Last().Neurons.First().outputPulse.value);
+                }
+
+                //Check the accuracy score against Y with the actual output
+                double accuracySum = 0;
+                int y_counter = 0;
+                outputs.ForEach((x) =>
+                {
+                    if (x == Y.Data[y_counter].First())
+                    {
+                        accuracySum++;
+                    }
+
+                    y_counter++;
+                });
+
+                //Optimize the synaptic weights
+                //OptimizeWeights(accuracySum / y_counter); TODO: Hinzufügen 
+                Console.WriteLine("Epoch: {0}, Accuracy: {1} %", epoch, (accuracySum / y_counter) * 100);
+                epoch++;
+            }
+        }
+
+        private void OptimizeWeights(double accuracy)
+        {
+            float lr = 0.1f;
+            //Skip if the accuracy reached 100%
+            if (accuracy == 1)
+            {
+                return;
+            }
+
+            if (accuracy > 1)
+            {
+                lr = -lr;
+            }
+
+            //Update the weights for all the layers
+            foreach (var layer in Layers)
+            {
+                //layer.Optimize(lr, 1);  TODO: hinzufügen
+            }
+        }
+
+
+        private void ComputeOutput()
+        {
+            bool first = true;
+            foreach (var layer in Layers)
+            {
+                //Skip first layer as it is input
+                if (first)
+                {
+                    first = false;
+                    continue;
+                }
+
+                layer.Forward();
+            }
         }
 
         public void Print()

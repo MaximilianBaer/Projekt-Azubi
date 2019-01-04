@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classes
 {
-    class NeuralData
+    public class NeuralData
     {
         public double[][] Data { get; set; }
 
