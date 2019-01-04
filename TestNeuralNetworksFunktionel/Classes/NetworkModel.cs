@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
+//layer methode / classe vervollständigen
 namespace Classes
 {
     public class NetworkModel
@@ -71,7 +72,7 @@ namespace Classes
                     }
 
                     //Fire all the neurons and collect the output
-                    computeOutput();
+                    ComputeOutput();
                     outputs.Add(Layers.Last().Neurons.First().outputPulse.value);
                 }
 
