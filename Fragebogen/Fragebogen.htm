@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fragebogen</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+    .div{
+      font-family: "Open Sans Condensed", sans-serif;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container" style="max-width:600px">
+        <div class="row">
+          <div class="col">
+            <p><h3>Umfrage BBW Dresden</h3></p>
+          </div>
+          <div class="col"  style="text-align: right; margin: 10px">
+            <img src="SRH.png" width="150px">
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col-12">
+      <form>
+        <div class="form-group" >
+        	<label>Wass wissen sie über das BBW</label>
+          <input class="form-control" type="text" v-model="Answers.a1" ><br/>
+        </div>
+
+        <div class="form-group" >
+        	<label>Wie gut Fanden sie den Tag der Berufsorientierung:</label>
+          <input class="form-control" type="range" min="0" max="10" list="tickmarks" v-model="Answers.a2" >
+          <datalist id="tickmarks">
+            <option value="0" label="0">
+            <option value="1" label="1">
+            <option value="2" label="2">
+            <option value="3" label="3">
+            <option value="4" label="4">
+            <option value="5" label="5">
+            <option value="6" label="6">
+            <option value="7" label="7">
+            <option value="8" label="8">
+            <option value="9" label="9">
+            <option value="10" label="10">
+          </datalist>
+          {{Answers.a2}}<br/>
+        </div>
+
+        <div class="form-group" >
+        	<label>Was wurden sie Anders Machen</label>
+          <input class="form-control" type="text" v-model="Answers.a3" ><br/>
+        </div>
+
+        <div class="form-group" >
+        	<label>und Warum:</label>
+          <input class="form-control" type="text" v-model="Answers.a4" ><br/>
+        </div>
+
+
+
+        <div class="form-group" >
+          <label>wie sehr hat ihnen unsere angebotenen Berufe gefallen</label>
+          <input class="form-control" type="range" min="0" max="10" list="tickmarks" v-model="Answers.a5" >
+          <datalist id="tickmarks">
+            <option value="0" label="0">
+            <option value="1" label="1">
+            <option value="2" label="2">
+            <option value="3" label="3">
+            <option value="4" label="4">
+            <option value="5" label="5">
+            <option value="6" label="6">
+            <option value="7" label="7">
+            <option value="8" label="8">
+            <option value="9" label="9">
+            <option value="10" label="10">
+          </datalist>
+          {{Answers.a5}}<br/>
+        </div>
+
+        <div class="form-group" >
+          <label>Welche Berufe hätten sie hinzugefügt</label>
+          <input class="form-control" type="text" class="" v-model="Answers.a6" ><br/>
+        </div>
+
+        <div class="form-group" v-if="Answers.a6" >
+          <label>Aus welchen Grund Hätten sie {{ Answers.a6 }} hinzugefügt</label>
+          <input class="form-control" type="text" class="" v-model="Answers.a7"><br/>
+        </div>
+
+        <div class="form-group" >
+        	<label>Wass sind ihre Wunschberufe (Bitte mit ';' trennen)</label>
+          <input class="form-control" type="text" v-model="Answers.a8"><br/>
+        </div>
+
+        <div class="form-group" >
+        	<label>Was Gefällt ihnen an diesen Berufen:</label>
+          <input class="form-control" type="text" v-model="Answers.a9"><br/>
+        </div>
+
+        <div class="form-group" >
+        	<label>Wie Gerne würden sie ins Wonheim Gehen</label>
+          <input class="form-control" type="range" min="0" max="10" list="tickmarks" v-model="Answers.a10">
+          <datalist id="tickmarks">
+            <option value="0" label="0">
+            <option value="1" label="1">
+            <option value="2" label="2">
+            <option value="3" label="3">
+            <option value="4" label="4">
+            <option value="5" label="5">
+            <option value="6" label="6">
+            <option value="7" label="7">
+            <option value="8" label="8">
+            <option value="9" label="9">
+            <option value="10" label="10">
+          </datalist>
+          {{Answers.a10}}<br/>
+        </div>
+
+        <div class="form-group" >
+        	<label>Aus welchen Grund haben sie {{Answers.a10}} gewählt</label>
+          <input class="form-control" type="text" v-model="Answers.a11"><br/>
+        </div>
+
+
+
+        <div class="form-group" >
+        	<label>Haben sie vorher schonmal vom BBW gehört:</label>
+          <input class="form-control" type="checkbox" class="" v-model="Answers.a12"><br v-if="Answers.a12"/>
+        </div>
+
+        <div class="form-group" v-if="Answers.a12" >
+        	<label>Falls ja wo und wie:</label>
+          <input class="form-control" type="text" class="" v-model="Answers.a13">
+        </div>
+
+      </form>
+    </div>
+    </div>
+    <div class="row" >
+      <div class="col-12" style="text-align: center; margin: 10px">
+        <button class="button">Absenden</button>
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    Answers:{
+      a1: null,
+      a2: 5,
+      a3: null,
+      a4: null,
+      a5: 5,
+      a6: null,
+      a7: null,
+      a8: null,
+      a9: null,
+      a10: 5,
+      a11: null,
+      a12: null,
+      a13: null,
+    }
+  },
+  methods: {
+    //TODO: Add Funktion
+  }
+})
+
+
+
+</script>

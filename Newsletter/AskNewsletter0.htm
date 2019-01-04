@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title id="app-1">{{SiteTitle}}</title>
+        <style type="text/css">
+        body {margin: 0; padding: 0; min-width: 100%!important;}
+        button{align: center;}
+        .content {width: 100%; max-width: 55px;}
+        .table {
+          width: 100%;
+          max-width: 550px !important;
+          font-family: "Open Sans Condensed", sans-serif;
+        }
+        .radiuss {
+          width: 100%;
+          border-radius: 20px;
+          background-color: rgba(238, 116, 0, 0.6)
+
+        }
+        .radi {
+          width: 100%;
+          border-radius: 20px;
+          background-color: rgba(238, 116, 0, 0.3)
+
+        }
+        .bt {
+          text-align: center
+        }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    </head>
+    <body yahoo  >
+        <table  background="bg.gif" class="table" align="center" border="0" cellpadding="5" cellspacing="0" id="app-2" >
+            <tr>
+                <td>
+                  <h2>{{Title}}</h2>
+                  {{Subtitle}}
+                </td>
+                <td>
+                  <img align="right" width="200px" src="SRH.png"/>
+                </td>
+            </tr>
+            <tr>
+              <td vertical-align="center" colspan="2" align="center">
+                <table class="radiuss" >
+                  <tr>
+                    <td>
+                      <p style="min-height: 60px">
+
+                    </p>
+                    <p class="bt">
+Wen Sie Nichts Mehr Verpassen Wollen und immer Gut informiert seinen wollen, Dann Abbonieren sie noch Heute unseren Email Newsletter
+                    <input type="email"><br/>
+
+
+                  </p>
+                    </td>
+                    </tr>
+                    </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td  vertical-align="center" colspan="2" align="center">
+                <table height="1px" class="radi" style="text-align: center" >
+                  <tr>
+                    <td>
+
+  <button><a href="https://media.tenor.com/images/8fc1c2fba3274cd9aec5bcaa30d471e0/tenor.gif"><h1>Anmelden<h1></a></button>
+                    </td>
+                    </tr>
+                    </table>
+              </td>
+            </tr>
+            <tr>
+              <td vertical-align="center" colspan="2" align="center">
+                <table class="radiuss" >
+                  <tr>
+                    <td>
+                      <p><h6>
+                    „Durch Angabe meiner E-Mail-Adresse und Anklicken des Buttons „Anmelden“ erkläre ich mich damit einverstanden, dass die SRH mir regelmäßig Informationen  per E-Mail zuschickt. Meine Einwilligung kann ich jederzeit gegenüber der SRH widerrufen.“
+                  </h6></p>
+                    </td>
+                    </tr>
+                    </table>
+              </td>
+            </tr>
+        </table>
+    </body>
+</html>
+<script>
+app1 = new Vue({
+  el: '#app-1',
+  data:{
+    SiteTitle: 'Newsletter'
+  }
+}),
+app2 = new Vue({
+  el: '#app-2',
+  data:{
+    Title: 'Unser Newsletter',
+    Subtitle: '',
+    color: 'ffffff'
+  }
+}),
+getDataApp = new Vue({
+
+})
+
+</script>
