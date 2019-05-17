@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIFO", "LIFO\LIFO.csproj", "{CA380703-083A-4171-949C-F747203FAE18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLib", "TestLib\TestLib.csproj", "{201C0837-198D-4886-91E6-621E0DBE36A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA380703-083A-4171-949C-F747203FAE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA380703-083A-4171-949C-F747203FAE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA380703-083A-4171-949C-F747203FAE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA380703-083A-4171-949C-F747203FAE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{201C0837-198D-4886-91E6-621E0DBE36A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{201C0837-198D-4886-91E6-621E0DBE36A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{201C0837-198D-4886-91E6-621E0DBE36A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{201C0837-198D-4886-91E6-621E0DBE36A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
